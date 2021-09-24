@@ -11,7 +11,7 @@ from bot.videoplayer import app as USER
 from config import Veez
 
 
-@Client.on_message(command(["vjoin", f"vjoin@{Veez.BOT_USERNAME}"]) & ~filters.private & ~filters.bot)
+@Client.on_message(command(["gel", f"gel@{Veez.BOT_USERNAME}"]) & ~filters.private & ~filters.bot)
 @authorized_users_only
 @errors
 async def entergroup(client, message):
@@ -31,7 +31,7 @@ async def entergroup(client, message):
 
     try:
         await USER.join_chat(invitelink)
-        await USER.send_message(message.chat.id, "🤖: i'm joined here for streaming video on video chat")
+        await USER.send_message(message.chat.id, "🤖: Geldim geldim hop burdayım ")
     except UserAlreadyParticipant:
         await message.reply_text(
             "<b>✅ assistant already entered this group</b>",
