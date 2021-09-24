@@ -43,7 +43,7 @@ async def cbstart(_, query: CallbackQuery):
                     "❔ HOW TO USE THIS BOT", callback_data="cbguide")
             ], [
                 InlineKeyboardButton(
-                    "🌐 Terms & Condition", callback_data="cbinfo")
+                    "🌐 Telegram Geliştiricileri", callback_data="cbinfo")
             ], [
                 InlineKeyboardButton(
                     "💬 Group", url=f"https://t.me/{Veez.GROUP_NAME}"),
@@ -95,8 +95,8 @@ async def cblist(_, query: CallbackQuery):
 
 » /izlet (reply to video or yt/live url) - to stream video
 » /dur - stop the video streaming
-» /song (song name) - Şarkı arar indirir Sadece Yt
-» /vsong (video adı) - videoyu arar indirir Sadece Yt
+» /ara (song name) - Şarkı arar indirir Sadece Yt
+» /bul (video adı) - videoyu arar indirir Sadece Yt
 » /lyric (song name) - lyric scrapper
 » /vjoin - invite assistant join to your group
 » /vleave - order assistant leave from your group
