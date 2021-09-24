@@ -225,7 +225,7 @@ def time_to_seconds(times):
     return sum(int(x) * 60 ** i for i, x in enumerate(reversed(stringt.split(":"))))
 
 
-@Client.on_message(command(["vsong", f"vsong@{Veez.BOT_USERNAME}"]) & filters.group & ~filters.edited)
+@Client.on_message(command(["bul", f"bul@{Veez.BOT_USERNAME}"]) & filters.group & ~filters.edited)
 async def vsong(client, message):
     ydl_opts = {
         'format':'best',
