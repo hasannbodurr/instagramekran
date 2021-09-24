@@ -71,11 +71,11 @@ Client Library and Framework in Pure Python for Users and Bots.__
 
 👨🏻‍💻 __Thanks to the developers who participated in the development of this bot, the list of devs can be seen below:__
 
-👩🏻‍✈️ » [Levina Shavila](https://github.com/levina-lab)
-🤵🏻 » [Sammy-XD](https://github.com/Sammy-XD)
-🤵🏻 » [Zxce3](https://github.com/Zxce3)
-🤵🏻 » [Tofik Denianto](https://github.com/tofikdn)
-🤵🏻 » [Shohih Abdul](https://github.com/DoellBarr)
+👩🏻‍✈️ » [ADSIZ KAPTAN](https://t.me/kizilsancaksahibi)
+🤵🏻 » [UYUMSUZ REİS](https://t.me/Gost_193)
+🤵🏻 » [KANLI REİS](https://t.me/kanlireis)
+🤵🏻 » [EL PATRON](https://t.me/elpatron0009)
+🤵🏻 » [BERHAVA](https://t.me/berhosky)
 
 __This bot licensed under GNU-GPL 3.0 License__""",
         reply_markup=InlineKeyboardMarkup(
@@ -91,12 +91,12 @@ __This bot licensed under GNU-GPL 3.0 License__""",
 @Client.on_callback_query(filters.regex("cblist"))
 async def cblist(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""📚 All Command List:
+        f"""📚 komut listesi:
 
-» /vplay (reply to video or yt/live url) - to stream video
-» /vstop - stop the video streaming
-» /song (song name) - download song from YT
-» /vsong (video name) - download video from YT
+» /izlet (reply to video or yt/live url) - to stream video
+» /dur - stop the video streaming
+» /song (song name) - Şarkı arar indirir Sadece Yt
+» /vsong (video adı) - videoyu arar indirir Sadece Yt
 » /lyric (song name) - lyric scrapper
 » /vjoin - invite assistant join to your group
 » /vleave - order assistant leave from your group
