@@ -73,7 +73,7 @@ def youtube(url: str):
         return None, None
 
 
-@Client.on_message(command(["vplay", f"vplay@{Veez.BOT_USERNAME}"]) & filters.group & ~filters.edited)
+@Client.on_message(command(["vplay", f"izlet@{Veez.BOT_USERNAME}"]) & filters.group & ~filters.edited)
 @authorized_users_only
 async def startvideo(client, m: Message):
     
@@ -81,10 +81,10 @@ async def startvideo(client, m: Message):
             [
                 [
                     InlineKeyboardButton(
-                        text="✨ ɢʀᴏᴜᴘ",
+                        text="✨ Support",
                         url=f"https://t.me/{Veez.GROUP_NAME}"),
                     InlineKeyboardButton(
-                        text="🌻 ᴄʜᴀɴɴᴇʟ",
+                        text="🌻 Destek Kanal",
                         url=f"https://t.me/{Veez.CHANNEL_NAME}")
                 ]
             ]
@@ -93,7 +93,7 @@ async def startvideo(client, m: Message):
     replied = m.reply_to_message
     if not replied:
         if len(m.command) < 2:
-            await m.reply("💡 **reply to video or provide youtube/live video url to start video streaming**")
+            await m.reply("💡 **video akışını başlatmak için videoyu yanıtlayın veya youtube/canlı video url'si sağlayın**")
         else:
             livelink = m.text.split(None, 1)[1]
             chat_id = m.chat.id
@@ -113,7 +113,7 @@ async def startvideo(client, m: Message):
                 return
             process = raw_converter(livelink, f'audio{chat_id}.raw', f'video{chat_id}.raw')
             FFMPEG_PROCESS[chat_id] = process
-            msg = await m.reply("🔁 **starting video streaming...**")
+            msg = await m.reply("🔁 **Video oynatılıyor...**")
             await asyncio.sleep(10)
             try:
                 audio_file = f'audio{chat_id}.raw'
@@ -142,7 +142,7 @@ async def startvideo(client, m: Message):
                 await m.reply_photo(
                     photo="https://telegra.ph/file/0faaa780ae861fb780814.png",
                     reply_markup=keyboard,
-                    caption=f"💡 **video streaming started!**\n\n🏷 **Name:** {title}\n⏱ **Duration:** `{convert_seconds(duration)} m`\n\n» **join to video chat on the top to watch the video.**")
+                    caption=f"💡 **video akışı başlatılıyor!**\n\n🏷 **Name:** {title}\n⏱ **Duration:** `{convert_seconds(duration)} m`\n\n» ****")
                 return await msg.delete()
                 await idle()
             except Exception as e:
