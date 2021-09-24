@@ -11,16 +11,16 @@ async def cbguide(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""❓ HOW TO USE THIS BOT:
 
-1.) first, add me to your group.
-2.) then promote me as admin and give all permissions except anonymous admin.
-3.) add @{Veez.ASSISTANT_NAME } to your group.
-4.) turn on the voice chat first before start to stream video.
-5.) type /izlet (reply to video) to start streaming.
-6.) type /dur to end the video streaming.
+1.) önce beni grubunuza ekleyin.
+2.) sonra beni yönetici olarak terfi ettir ve anonim yönetici hariç tüm izinleri ver.
+3.) @ { Veez . ASSISTANT_NAME  } grubunuza.
+4.) video akışına başlamadan önce sesli sohbeti açın.
+5.) akışı başlatmak için /izlet (videoya yanıtla) yazın.
+6.) video akışını sonlandırmak için /dur yazın.
 
-📝 **note: stream & stop command can only be executed by group admin only!**
+📝 **not: akış ve durdurma komutu yalnızca grup yöneticisi tarafından yürütülebilir!**
 
-⚡ __Maintained by Veez Project Team__""",
+⚡ __Bakımını KIZILSANCAK Proje Ekibi Yapmaktadır__""",
         reply_markup=InlineKeyboardMarkup(
             [[
                 InlineKeyboardButton(
@@ -62,7 +62,7 @@ async def cbstart(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbinfo"))
 async def cbinfo(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""🌐 **bot information !**
+        f"""🌐 **bot bilgisi !**
 
 🤖 __This bot was created to stream video in telegram group video chats using several methods from WebRTC.__
 
@@ -76,6 +76,7 @@ Client Library and Framework in Pure Python for Users and Bots.__
 🤵🏻 » [KANLI REİS](https://t.me/kanlireis)
 🤵🏻 » [EL PATRON](https://t.me/elpatron0009)
 🤵🏻 » [BERHAVA](https://t.me/berhosky)
+🤵🏻 » [MÜSLÜM](https://t.me/sigara46)
 
 __This bot licensed under GNU-GPL 3.0 License__""",
         reply_markup=InlineKeyboardMarkup(
@@ -98,7 +99,7 @@ async def cblist(_, query: CallbackQuery):
 » /ara (song name) - Şarkı arar indirir Sadece Yt
 » /bul (video adı) - videoyu arar indirir Sadece Yt
 » /lyric (song name) - lyric scrapper
-» /vjoin - invite assistant join to your group
+» /gel - invite assistant join to your group
 » /vleave - order assistant leave from your group
 
 🎊 FUN CMD:
