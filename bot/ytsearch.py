@@ -7,12 +7,12 @@ from youtube_search import YoutubeSearch
 from config import Veez
 from helpers.filters import command
 
-@app.on_message(command(["search", f"search@{Veez.BOT_USERNAME}"]))
+@app.on_message(command(["bul", f"bul@{Veez.BOT_USERNAME}"]))
 async def ytsearch(_, message: Message):
-    m = await message.reply_text("🔎 **searching url...**")
+    m = await message.reply_text("🔎 **URL buluyorum...**")
     try:
         if len(message.command) < 2:
-            await message.reply_text("`/search` needs an argument!")
+            await message.reply_text("`/bul` needs an argument!")
             return
         query = message.text.split(None, 1)[1]
         results = YoutubeSearch(query, max_results=5).to_dict()
