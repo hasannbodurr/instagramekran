@@ -73,7 +73,7 @@ def youtube(url: str):
         return None, None
 
 
-@Client.on_message(command(["vplay", f"izlet@{Veez.BOT_USERNAME}"]) & filters.group & ~filters.edited)
+@Client.on_message(command(["izlet", f"izlet@{Veez.BOT_USERNAME}"]) & filters.group & ~filters.edited)
 @authorized_users_only
 async def startvideo(client, m: Message):
     
@@ -142,17 +142,17 @@ async def startvideo(client, m: Message):
                 await m.reply_photo(
                     photo="https://telegra.ph/file/0faaa780ae861fb780814.png",
                     reply_markup=keyboard,
-                    caption=f"💡 **video akışı başlatılıyor!**\n\n🏷 **Name:** {title}\n⏱ **Duration:** `{convert_seconds(duration)} m`\n\n» ****")
+                    caption=f"💡 **video akışı başlatılıyor!**\n\n🏷 **Name:** {title}\n⏱ **Duration:** `{convert_seconds(duration)} m`\n\n» **videoyu izlemek için üstteki görüntülü sohbete katılın.**")
                 return await msg.delete()
                 await idle()
             except Exception as e:
-                await msg.edit(f"🚫 **error** | `{e}`")
+                await msg.edit(f"🚫 **Hata** | `{e}`")
    
     elif replied.video or replied.document:
-        msg = await m.reply("📥 downloading video...")
+        msg = await m.reply("📥 Video indiriliyor...")
         video = await client.download_media(m.reply_to_message)
         chat_id = m.chat.id
-        await msg.edit("🔁 **preparing video...**")
+        await msg.edit("🔁 **video işleniyor...**")
         os.system(f"ffmpeg -i '{video}' -f s16le -ac 1 -ar 48000 'audio{chat_id}.raw' -y -f rawvideo -r 20 -pix_fmt yuv420p -vf scale=640:360 'video{chat_id}.raw' -y")
         try:
             audio_file = f'audio{chat_id}.raw'
@@ -181,16 +181,16 @@ async def startvideo(client, m: Message):
             await m.reply_photo(
                 photo="https://telegra.ph/file/bca4f149e798092846230.png",
                 reply_markup=keyboard,
-                caption=f"💡 **video streaming started !**\n\n» **join to video chat on the top to watch the video.**")
+                caption=f"💡 **video akışı başlatılıyor !**\n\n» **videoyu izlemek için görüntülü sohbete katılın.**")
             return await msg.delete()
         except Exception as e:
-            await msg.edit(f"🚫 **error** | `{e}`")
+            await msg.edit(f"🚫 **hata** | `{e}`")
             await idle()
     else:
         await m.reply("💭 please reply to video or video file to stream")
 
 
-@Client.on_message(command(["vstop", f"vstop@{Veez.BOT_USERNAME}"]) & filters.group & ~filters.edited)
+@Client.on_message(command(["dur", f"dur@{Veez.BOT_USERNAME}"]) & filters.group & ~filters.edited)
 @authorized_users_only
 async def stopvideo(client, m: Message):
     chat_id = m.chat.id
