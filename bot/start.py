@@ -37,7 +37,7 @@ async def _human_time_duration(seconds):
 async def start(_, m: Message):
     if m.chat.type == "private":
         await m.reply_text(
-            f"✨ **Hello there, I am a telegram group video streaming bot.**\n\n💭 **I was created to stream videos in group "
+            f"✨ **Merhaba sahip, Ben Telegram Onaylı Grup TV botuyum.**\n\n💭 **Sesli sohbetlerinizde video izlemenizi sağlayabiliriz "
             f"video chats easily.**\n\n❔ **To find out how to use me, please press the help button below** 👇🏻",
             reply_markup=InlineKeyboardMarkup(
                 [[
