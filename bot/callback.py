@@ -64,12 +64,12 @@ async def cbinfo(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""🌐 **bot bilgisi !**
 
-🤖 __This bot was created to stream video in telegram group video chats using several methods from WebRTC.__
+🤖 __Bu bot, WebRTC'den çeşitli yöntemler kullanılarak telegram grubu görüntülü sohbetlerinde video akışı yapmak için oluşturuldu.__
 
-💡 __Powered by PyTgcalls the Async client API for the Telegram Group Calls, and Pyrogram the telegram MTProto API 
-Client Library and Framework in Pure Python for Users and Bots.__
+💡 __Bu botu Gruplarınıza Tam yetkili bir şekilde ekleyebilir veya botun klonunu yapmak için klon yöntemini
+Kullanabilirsiniz.__
 
-👨🏻‍💻 __Thanks to the developers who participated in the development of this bot, the list of devs can be seen below:__
+👨🏻‍💻 __Bu botun geliştirilmesine katılan geliştiriciler sayesinde geliştiricilerin listesi aşağıda görülebilir:__
 
 👩🏻‍✈️ » [ADSIZ KAPTAN](https://t.me/kizilsancaksahibi)
 🤵🏻 » [UYUMSUZ REİS](https://t.me/Gost_193)
@@ -98,8 +98,8 @@ async def cblist(_, query: CallbackQuery):
 » /dur - stop the video streaming
 » /ara (song name) - Şarkı arar indirir Sadece Yt
 » /bul (video adı) - videoyu arar indirir Sadece Yt
-» /lyric (song name) - lyric scrapper
-» /gel - invite assistant join to your group
+» /lyric (song name) - Şarkı sözü arar
+» /gel - Asistanı sohbete davet eder
 » /vleave - order assistant leave from your group
 
 🎊 FUN CMD:
