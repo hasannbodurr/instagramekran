@@ -22,13 +22,13 @@ def convert(text):
     return audio
 
 
-@Client.on_message(filters.command("tts"))
+@Client.on_message(filters.command("ses"))
 async def text_to_speech(_, message: Message):
     if not message.reply_to_message:
-        return await message.reply_text("💡 reply to some text...")
+        return await message.reply_text("💡 bir metne cevap verin...")
     if not message.reply_to_message.text:
-        return await message.reply_text("💡 reply to some text...")
-    m = await message.reply_text("🔁 processing...")
+        return await message.reply_text("💡 bir metne cevap verin...")
+    m = await message.reply_text("🔁 işleniyor...")
     text = message.reply_to_message.text
     try:
         loop = get_running_loop()
