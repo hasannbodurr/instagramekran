@@ -204,9 +204,9 @@ async def stopvideo(client, m: Message):
                 print(e)
                 pass
         await call_py.leave_group_call(chat_id)
-        await m.reply("✅ **successfully left vc !**")
+        await m.reply("✅ **başarıyla durdum !**")
     except Exception as e:
-        await m.reply(f"🚫 **error** | `{e}`")
+        await m.reply(f"🚫 **hata** | `{e}`")
 
 @call_py.on_stream_end()
 async def handler(client: PyTgCalls, update: Update):
