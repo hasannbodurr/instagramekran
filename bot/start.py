@@ -38,7 +38,7 @@ async def start(_, m: Message):
     if m.chat.type == "private":
         await m.reply_text(
             f"✨ **Merhaba sahip, Ben Telegram Onaylı Grup TV botuyum.**\n\n💭 **Sesli sohbetlerinizde video izlemenizi sağlayabiliriz "
-            f"video chats easily.**\n\n❔ **To find out how to use me, please press the help button below** 👇🏻",
+            f"video chats easily.**\n\n❔ **Nasıl kullanacağınızı görmek için yarım isteyin** 👇🏻",
             reply_markup=InlineKeyboardMarkup(
                 [[
                     InlineKeyboardButton(
