@@ -51,12 +51,12 @@ async def start(_, m: Message):
                         "🌐 Telegram Geliştiricileri", callback_data="cbinfo")
                 ], [
                     InlineKeyboardButton(
-                        "💬 Group", url="https://t.me/sancakailesi"),
+                        "💬 Group", url="https://t.me/ldrrrrraa"),
                     InlineKeyboardButton(
-                        "📣 Channel", url="https://t.me/kizilsancakbilgi")
+                        "📣 Channel", url="https://t.me/ldrrlrrmzk")
                 ], [
                     InlineKeyboardButton(
-                        "👩🏻‍💻 Developer", url="https://t.me/kizilsancaksahibi")
+                        "👩🏻‍💻 Developer", url="https://t.me/hasanbodurrr")
                 ], [
                     InlineKeyboardButton(
                         "📚 All Command List", callback_data="cblist")
@@ -90,10 +90,10 @@ async def alive(_, m: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "✨ Group", url=f"https://t.me/Sancakailesi"
+                        "✨ Group", url=f"https://t.me/ldrrrrraa"
                     ),
                     InlineKeyboardButton(
-                        "📣 Channel", url=f"https://t.me/kizilsancakbilgi"
+                        "📣 Channel", url=f"https://t.me/ldrrlrrmzk"
                     )
                 ]
             ]
